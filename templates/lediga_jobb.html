@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>My Web Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex align-items-center justify-content-center">
+                <h1>Företagets namn</h1>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="index.html">Startsidan</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" href="lediga_jobb.html">Lediga jobb</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" href="#">Konntakta oss</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </nav>
+    </header>
+
+   <main>
+        <div class="container my-5">
+    <div class="row g-4 align-items-stretch">
+        {% for jobb in jobb %}
+        <div class="col-md-4 d-flex">
+            <div class="card w-100 h-100">
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title fs-4">{{ jobb.titel }}</h2>
+                        <ul class="mt-3 list-unstyled flex-grow-1 jobb-text">
+                            <li class="d-flex align-items-start mb-2">
+                                <span  class="me-2 text-warning">&#9733;</span>
+                                <span><span class="fw-bold">Beskrivning:</span> {{ jobb.beskrivning }}</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <span  class="me-2 text-warning">&#9733;</span>
+                                <span><span class="fw-bold">Lön:</span> {{ jobb.lön }}</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <span  class="me-2 text-warning">&#9733;</span>
+                                <span><span class="fw-bold">Plats:</span> {{ jobb.plats }}</span>
+                            </li>
+                        </ul>
+                    <a href="mer_om_jobbet.html" class="btn btn-primary mt-auto">Mer om jobbet</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+    </main>      
+</html>
