@@ -5,8 +5,12 @@ body{
 
 }
 .navbar h1 {
-    margin-right: 25%; 
-     white-space: nowrap;
+    
+    white-space: nowrap;
+}
+
+.navbar > .container-fluid{
+    gap: 15%;
 }
 
 header {
