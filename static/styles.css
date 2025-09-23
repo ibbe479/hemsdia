@@ -132,3 +132,20 @@ footer {
 .jobb-form .btn:active {
     transform: translateY(1px);
 }
+
+.form-and-preview-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.jobb-form,
+.preview-container {
+    flex: 1;
+}
+
+.preview-container {
+    max-width: 400px; /* Eller någon annan lämplig bredd */
+}
