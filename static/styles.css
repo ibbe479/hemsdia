@@ -70,9 +70,65 @@ footer {
     
 
 .jobb-text {
-    font-size: 18px; /* justera värdet efter önskemål */
+    font-size: 18px; 
 }
 
 .card {
-    min-height: 350px; /* justera efter behov */
+    min-height: 350px; 
+}
+
+
+.jobb-form {
+    max-width: 800px; 
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 20px 30px;
+}
+
+.jobb-form .fieldset {
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: #fafbfd;
+}
+
+.jobb-form .fieldset-legend {
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.jobb-form .form-grid {
+    display: flex;
+    gap: 30px; 
+}
+
+.jobb-form .column {
+    flex: 1; 
+}
+
+.jobb-form .label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568;
+}
+
+.jobb-form .input {
+    margin-bottom: 20px;
+}
+
+.jobb-form .btn {
+    background-color: #4c51bf;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.jobb-form .btn:hover {
+    background-color: #434190;
+}
+
+.jobb-form .btn:active {
+    transform: translateY(1px);
 }

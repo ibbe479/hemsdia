@@ -32,40 +32,44 @@
         </nav>
     </header>
     <main>
-        <!-- Form-taggen har lagts till här för att skicka data till din Flask-app -->
-        <form action="/skapa-jobb" method="post">
-            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-            <legend class="fieldset-legend">Skapa ny jobb annons</legend>
+    <form action="/skapa-jobb" method="post" id="jobb-form" class="jobb-form">
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend">Skapa ny jobbannons</legend>
 
-            <label class="label">Arbetstitel</label>
-            <input type="text" class="input" placeholder="Arbetstiteln" name="titel"/>
+            <div class="form-grid">
+                <div class="column">
+                    <label class="label">Arbetstitel</label>
+                    <input type="text" class="input" placeholder="Arbetstiteln" name="titel"/>
 
-            <label class="label">Beskrivning</label>
-            <input type="text" class="input" placeholder="Beskriv jobbet kort" name="beskrivning"/>
+                    <label class="label">Beskrivning</label>
+                    <input type="text" class="input" placeholder="Beskriv jobbet kort" name="beskrivning"/>
 
-            <label class="label">Lön</label>
-            <input type="text" class="input" placeholder="beskriv lönen kort" name="lon" />
+                    <label class="label">Lön</label>
+                    <input type="text" class="input" placeholder="Beskriv lönen kort" name="lon" />
 
-            <label class="label">Plats</label>
-            <input type="text" class="input" placeholder="vart ligger jobbet" name="plats"/>
+                    <label class="label">Plats</label>
+                    <input type="text" class="input" placeholder="Vart ligger jobbet" name="plats"/>
+                </div>
 
-            <label class="label">Arbetsuppgifter</label>
-            <input type="text" class="input" placeholder="Beskriv de huvudsakliga arbetsuppgifterna" name="ansvar"/>
+                <div class="column">
+                    <label class="label">Arbetsuppgifter</label>
+                    <input type="text" class="input" placeholder="Beskriv de huvudsakliga arbetsuppgifterna" name="ansvar"/>
 
-            <label class="label">Kvalifikationer och krav</label>
-            <input type="text" class="input" placeholder="Kvalifikationer och krav" name="krav"/>
+                    <label class="label">Kvalifikationer och krav</label>
+                    <input type="text" class="input" placeholder="Kvalifikationer och krav" name="krav"/>
 
-            <label class="label">Förmåner och företagskultur</label>
-            <input type="text" class="input" placeholder="Beskriv förmåner och företagskultur" name="formaner"/>
+                    <label class="label">Förmåner och företagskultur</label>
+                    <input type="text" class="input" placeholder="Beskriv förmåner och företagskultur" name="formaner"/>
 
-            <label class="label">Arbetstider</label>
-            <input type="text" class="input" placeholder="Beskriv arbetstiderna" name="arbetstider"/>
+                    <label class="label">Arbetstider</label>
+                    <input type="text" class="input" placeholder="Beskriv arbetstiderna" name="arbetstider"/>
+                </div>
+            </div>
 
-            <!-- Knappen har nu en type="submit" för att skicka formuläret -->
             <button class="btn btn-neutral mt-4" type="submit">Skapa jobbannons</button>
-            </fieldset>
-        </form>
-    </main>
+        </fieldset>
+    </form>
+</main>
     
     <footer>
         <h2>Hitta oss här!</h2>
