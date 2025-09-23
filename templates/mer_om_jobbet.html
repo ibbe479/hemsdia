@@ -33,19 +33,18 @@
     </header>
     
 
-    <main>
-        
-        <h1>{{ jobb.titel }}</h1>
-        <p>{{ jobb.beskrivning }}</p>
-        <p><strong>Lön:</strong> {{ jobb.lön }}</p>
-        <p><strong>Plats:</strong> {{ jobb.plats }}</p>
+   <main>
+    <div class="job-details-container">
+        <h1 class="job-title">{{ jobb.titel }}</h1>
+        <p class="job-text">{{ jobb.beskrivning }}</p>
+        <p class="job-text"><strong class="job-label">Lön:</strong> {{ jobb.lön }}</p>
+        <p class="job-text"><strong class="job-label">Plats:</strong> {{ jobb.plats }}</p>
 
-        <h2>Om tjänsten</h2>
-        <p><strong>Ansvar:</strong> {{ besk.ansvar }}</p>
-        <p><strong>Krav:</strong> {{ besk.krav }}</p>
-        <p><strong>Förmåner:</strong> {{ besk.förmåner }}</p>
-        <p><strong>Arbetstider:</strong> {{ besk.arbetstider }}</p>
-
-    </main>
+        <h2 class="section-heading">Om tjänsten</h2>
+        <p class="job-text"><strong class="job-label">Ansvar:</strong> {{ besk.ansvar }}</p>
+        <p class="job-text"><strong class="job-label">Krav:</strong> {{ besk.krav }}</p>
+        <p class="job-text"><strong class="job-label">Förmåner:</strong> {{ besk.förmåner }}</p>
+        <p class="job-text"><strong class="job-label">Arbetstider:</strong> {{ besk.arbetstider }}</p>
+        <a href="mailto:{{ besk.mail }}?subject=Ansökan till jobbet: {{ jobb.titel }}">Ansök via mail</a></main>
 </body>
 </html>

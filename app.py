@@ -40,6 +40,7 @@ def skapa_jobb():
     krav = request.form.get("krav")
     formaner = request.form.get("formaner")
     arbetstider = request.form.get("arbetstider")
+    mail = request.form.get("mail")
 
     # Skapa nya objekt och lägg till dem i listorna
     nytt_jobb = Jobb(
@@ -52,7 +53,9 @@ def skapa_jobb():
         Ansvar=ansvar,
         krav=krav,
         Förmåner=formaner,
-        Arbetstider=arbetstider
+        Arbetstider=arbetstider,
+        mail=mail
+
     )
 
     jobb_lista.append(nytt_jobb)
